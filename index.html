@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		table,td,th{
+			border: 2px solid;
+			text-align: center;
+			height: 50px;
+			box-shadow: 5px 10px 18px white;
+			column-width: 50px;
+			background-color: grey;
+			margin: auto; 
+		}
+		button{
+			padding: 12px 30px;
+			background-color: grey;
+  			color: black;
+  			border: 2px solid #7f8c8d;
+
+		}
+		</style>
+
+	<h1 style="text-align: center;">
+		A simple calculator Program</h1>
+	
+</head>
+<body>
+<div class="container">
+<table> 
+		<tr>
+			<td colspan="4" style="size: medium;" id="results">0</td>
+		</tr>
+		<tr>
+			<td><button onclick="push(this);">7</button></td>
+			<td><button onclick="push(this);">8</button></td>
+			<td><button onclick="push(this);">9</button></td>
+			<td><button onclick="push(this);">/</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="push(this);">4</button></td>
+			<td><button onclick="push(this);">5</button></td>
+			<td><button onclick="push(this);">6</button></td>
+			<td><button onclick="push(this);">*</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="push(this);">1</button></td>
+			<td><button onclick="push(this);">2</button></td>
+			<td><button onclick="push(this);">3</button></td>
+			<td><button onclick="push(this);">-</button></td>
+		</tr
+		<tr>
+			<td><button onclick="push(this);">C</button></td>
+			<td><button onclick="push(this);">0</button></td>
+			<td><button onclick="push(this);">=</button></td>
+			<td><button onclick="push(this);">+</button></td>
+		</tr>
+		</table>
+</div>
+ <script type="text/javascript">
+ 	var results = document.getElementById('results');
+
+    function push(obj) 
+    {
+         
+        var pushed = obj.innerHTML;
+         
+        if (pushed == '=')
+         {
+            
+            results.innerHTML = eval(results.innerHTML);
+             
+        }
+         else if (pushed == 'C') 
+        {
+            
+            results.innerHTML = '0';     
+        }
+         else
+         {
+            if (results.innerHTML == '0') 
+            {
+            	results.innerHTML = pushed;
+                 
+            } else
+             {
+                results.innerHTML += pushed;   
+            }
+        }
+    }
+ </script>
+</body>
+</html>
+
