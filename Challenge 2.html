@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		table,tr,td{
+			border: solid black;
+			width: 33%;
+			text-align: center;
+			border-collapse: collapse;
+			background-color: lightblue;
+		}
+		table
+		{
+			margin: auto;
+		}
+		caption{
+			padding: 8px;
+			color: purple;
+			animation-duration: 500ms;
+			animation-name: blink;
+			animation-iteration-count: infinite;
+		}
+		@keyframes blink
+		{
+			from{
+				opacity: 1;
+			}
+			to{
+				opacity: 0;
+			}
+		}
+	</style>
+<body>
+	<table border="1" align="center">
+		<caption style="caption-side: bottom">Assignment-2 challange completed</caption>
+		<tr>
+			<th colspan='3'>NUMBERS FROM 0 TO 10 WITH THEIR SQUARES AND CUBES</th>
+		</tr>
+		<tr>
+			<td>Number</td>
+			<td>Square</td>
+			<td>Cube</td>
+		</tr>
+		<script type="text/javascript">
+			for(var i=0;i<=10;i++)
+			{
+				document.write("<tr align='center'><td>"+ i +"</td><td>"+ i*i +"</td><td>"+ i*i*i +"</td><td>")
+			}
+			</script>
+		</table>
+	</head>
+</body>
+
+</html>
