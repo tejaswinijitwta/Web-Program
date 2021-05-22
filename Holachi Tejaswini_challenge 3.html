@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+* {
+    box-sizing: border-box;
+  }
+#text{
+    text-align: center;
+    margin-top: 5rem;
+}
+img{
+    width: 300px;
+    height: 200px;
+    margin-left: 2rem;
+    /* margin-top: 1rem; */
+}
+.star{
+    width: 1em;
+    height: 1rem;
+    margin-left: auto;
+}
+h2{
+    transform: translate(-50%, -60%);
+}    
+
+	
+</style>
+<title>Challange-3</title>
+</head>
+<body>
+<header>
+	<div>
+		<a  href="#">Home <span>|</span></a>
+        <a  href="#">Place <span>|</span></a>
+        <a  href="#">Gallery <span>|</span></a>
+        <a  href="#">About Us <span> | </span></a>
+        <a  href="#">Search <span>|</span></a>
+	</div>
+</header>
+<div class="row">
+	<div class="column">
+		<h3>Malpe beach,Udpi</h3>
+		<img src="C:\Users\ADMIN\Desktop\WTA.jpg"alt="Malpe Beach">
+		<p>by <span> <a href="#">Google</a></span></p>
+	</div>
+	<div class="column" id="text">
+		<h2 id="txt1">Ocean Therapy</h2>
+		</div>
+	</div>
+	<p>
+		The Malpe Beach has a pleasant weather and clean white sand which makes it ideal for a variety of water sports activities. It is a hidden treasure that lies in the State of Karnataka.The beach is one of a kind, you can lie down and enjoy the sunset.
+	</p>
+	<section>
+        <p>
+            Year: 2021 <br> Date: 8th March
+        </p>
+    </section>
+    <div>
+        <h3>Reviews:</h3>
+        <div>
+            <p><strong>Amazing</strong><br>Usha
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            </p>
+        <p> Really awesome &#128525;&#128525;</p>
+        <hr>
+        </div>
+        <div>
+            <p><strong>Nice</strong><br>Sanjeeva
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s2.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s2.png" alt="">
+        </p>
+        <p> Good one &#128512; !!</p>
+        <hr>
+        </div>
+                <div>
+            <p><strong>Not bad</strong><br>Vaishu
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s1.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s2.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s2.png" alt="">
+            <img class="star" src="C:\Users\ADMIN\Desktop\s2.png" alt="">
+        </p>
+        <p> Not so good !! &#128530;</p>
+        <hr>
+        </div>
+    </div>
+	</div>
+        <footer>
+        <div>
+            <a  href="#">Home <span> | </span></a>
+            <a  href="#">Place <span> | </span></a>
+            <a  href="#">Gallery <span> | </span></a>
+            <a  href="#">About Us <span> | </span></a>
+        </div>
+        <p> <i>Copyrights <span>&#169;</span> 2020  All rights reserved</i></p>
+    </footer>
+    <script type="text/javascript">
+    	var var1 = setInterval(inTimer, 500);
+		var fs = 5; //font size
+		var ids = document.getElementById("txt1");
+		function inTimer()
+			{
+				ids.innerHTML = 'Ocean Thearpy';
+				ids.setAttribute('style', "font-size: " + fs + "px; color: red");
+				fs += 5;
+				if (fs >= 50)
+			{
+				clearInterval(var1); //paused
+				var2 = setInterval(deTimer, 500);
+			}
+			function deTimer() //fs = 50px
+				{
+					fs -= 5;
+					ids.innerHTML = 'Ocean Thearpy';
+					ids.setAttribute('style', "font-size: " + fs + "px; color: blue");
+					if (fs == 5)
+						{	
+							clearInterval(var2); //paused
+							var1 = setInterval(inTimer, 500);
+						}
+}
+	
+
+}
+
+    </script>
+</body>
+</html>
